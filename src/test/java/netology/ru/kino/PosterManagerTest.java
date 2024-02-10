@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class PmTest {
-    PosterManager manager = new PosterManager(3);
+public class PosterManagerTest {
+    PosterManager manager = new PosterManager(5);
 
     @BeforeEach
     public void setup() {
@@ -47,7 +47,7 @@ public class PmTest {
         manager.add("Film 4");
         manager.add("Film 5");
 
-        String[] expected = {"Movie 5", "Movie 4", "Movie 3", "Movie 2", "Movie 1"};
+        String[] expected = {"Film 5", "Film 4", "Film 3", "Film 2", "Film 1"};
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
